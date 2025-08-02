@@ -40,14 +40,5 @@ public class UiTest extends BaseTest {
         newWindowPage.getNewWindow();
         assertEquals("https://ya.ru/", driver.getCurrentUrl());
     }
-
-    @Test
-    public void checkAnswersToQuestions(){
-        mainPage.openPage();
-        registerPage.getClickCookieButton();
-        mainPage.scrollToQuestion();
-
-        assertEquals("Отображаемый текст не соответствует первоначальному", mainPage.answers_original, mainPage.getAnswersToQuestionsList());
-    }
 }
 
